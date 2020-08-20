@@ -1,8 +1,9 @@
-FROM node:alpine 
+FROM node:lts-slim
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN npm install express --save && npm install 
-COPY . .
-EXPOSE 4007
+
+EXPOSE 3000
 
 CMD ["npm", "start"]
 
