@@ -1,10 +1,9 @@
-FROM node:alpine
+FROM node:lts-slim
 
-WORKDIR '/app'
+RUN mkdir -p /usr/src/app
 
-COPY package.json .
-RUN npm install
-RUN npm install -g express-generator
-RUN npm install express --save
-COPY . .
-CMD ["npm", "start"]
+WORKDIR /usr/src/app
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
