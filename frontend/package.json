@@ -32,4 +32,8 @@
       "last 1 safari version"
     ]
   }
+  {
+     "proxy" : "http://backend:5000"
+  }
+
 }
